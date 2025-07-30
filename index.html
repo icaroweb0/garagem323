@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviço - Garagem 323</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact; /* Força a impressão de cores de fundo no Chrome/Safari */
+            color-adjust: exact; /* Padrão */
+        }
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+        .input-line {
+            border-bottom: 1px solid #9ca3af;
+            padding-bottom: 2px;
+            min-height: 24px;
+        }
+        .section-title {
+            background-color: #f3f4f6;
+            padding: 6px 12px;
+            font-weight: 600;
+            border-left: 4px solid #3b82f6;
+            margin-top: 16px;
+            margin-bottom: 12px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+        }
+        .checkbox-label input {
+            margin-right: 6px;
+        }
+        .car-drawing {
+            font-family: monospace;
+            white-space: pre;
+            text-align: center;
+            line-height: 1.2;
+            margin: 1rem 0;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+
+        <!-- CABEÇALHO -->
+        <header class="flex flex-col sm:flex-row justify-between items-start pb-4 border-b-2 border-gray-200">
+            <div class="flex items-center w-full sm:w-2/3">
+                <div class="flex items-center justify-center rounded-md mr-4" style="width: 150px;">
+                    <!--<span class="text-gray-500 text-xs text-center">SEU LOGO</span> -->
+                    <img src="/garagem_323_logo_alta_resolucao_2.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">GARAGEM 323</h1>
+                    <p class="text-sm text-gray-600">CNPJ: 00.000.000/0001-00</p>
+                    <p class="text-sm text-gray-600">Endereço: Av. Luciano de Bona, 5355 - Centro - Peruíbe/SP</p>
+                    <p class="text-sm text-gray-600">WhatsApp: (13) 99683-6538</p>
+                    <p class="text-sm text-gray-600">E-mail: contato@garagem323.com.br | @garagem323</p>
+                </div>
+            </div>
+            <div class="mt-4 sm:mt-0 w-full sm:w-auto flex sm:flex-col items-start sm:items-end">
+                 <div class="border-2 border-gray-700 p-3 rounded-lg text-center">
+                    <h2 class="font-bold text-lg leading-tight">ORDEM DE SERVIÇO</h2>
+                    <p class="font-bold text-xl text-red-600">Nº _____________</p>
+                </div>
+                <div class="ml-4 sm:ml-0 sm:mt-2 text-right">
+                    <p class="text-sm font-semibold">Data de Emissão:</p>
+                    <p class="text-sm">____ / ____ / ________</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- DADOS DO CLIENTE -->
+        <section>
+            <h3 class="section-title">🧑‍🔧 DADOS DO CLIENTE</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Nome Completo:</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">CPF / CNPJ:</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Telefone (Celular):</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Telefone (Fixo):</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">E-mail:</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Endereço Completo:</p><div class="input-line"></div></div>
+            </div>
+        </section>
+
+        <!-- DADOS DO VEÍCULO -->
+        <section>
+            <h3 class="section-title">🚗 DADOS DO VEÍCULO</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4">
+                <div><p class="text-sm font-medium">Marca:</p><div class="input-line"></div></div>
+                <div><p class="text-sm font-medium">Modelo:</p><div class="input-line"></div></div>
+                <div><p class="text-sm font-medium">Cor:</p><div class="input-line"></div></div>
+                <div><p class="text-sm font-medium">Ano Fab./Mod.:</p><div class="input-line"></div></div>
+                <div><p class="text-sm font-medium">Placa:</p><div class="input-line"></div></div>
+                <div><p class="text-sm font-medium">Chassi:</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Quilometragem (Entrada):</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Combustível:</p>
+                    <div class="flex flex-wrap mt-1 text-sm">
+                        <label class="checkbox-label"><input type="checkbox">Gasolina</label>
+                        <label class="checkbox-label"><input type="checkbox">Etanol</label>
+                        <label class="checkbox-label"><input type="checkbox">Flex</label>
+                        <label class="checkbox-label"><input type="checkbox">Diesel</label>
+                    </div>
+                </div>
+                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Nível de Combustível:</p>
+                    <div class="flex flex-wrap mt-1 text-sm">
+                        <label class="checkbox-label"><input type="checkbox">1/4</label>
+                        <label class="checkbox-label"><input type="checkbox">1/2</label>
+                        <label class="checkbox-label"><input type="checkbox">3/4</label>
+                        <label class="checkbox-label"><input type="checkbox">Cheio</label>
+                        <label class="checkbox-label"><input type="checkbox">Outro:_____</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS SOLICITADOS -->
+        <section>
+            <h3 class="section-title">🔧 SERVIÇOS SOLICITADOS</h3>
+            <div class="text-sm flex flex-wrap gap-x-4 gap-y-2 mb-3">
+                <label class="checkbox-label"><input type="checkbox">Troca de Óleo</label>
+                <label class="checkbox-label"><input type="checkbox">Freio</label>
+                <label class="checkbox-label"><input type="checkbox">Suspensão</label>
+                <label class="checkbox-label"><input type="checkbox">Motor</label>
+                <label class="checkbox-label"><input type="checkbox">Elétrica</label>
+                <label class="checkbox-label"><input type="checkbox">Alinhamento</label>
+                <label class="checkbox-label"><input type="checkbox">Balanceamento</label>
+            </div>
+            <p class="text-sm font-medium">Observações do Cliente (Queixa Principal):</p>
+            <div class="w-full h-20 border border-gray-300 rounded-md mt-1 p-2"></div>
+        </section>
+
+        <!-- DIAGNÓSTICO INICIAL -->
+        <section>
+            <h3 class="section-title">🧰 DIAGNÓSTICO INICIAL (OFICINA)</h3>
+            <p class="text-sm font-medium">Descrição Técnica Inicial:</p>
+            <div class="w-full h-20 border border-gray-300 rounded-md mt-1 p-2"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mt-3">
+                <div><p class="text-sm font-medium">Peças que podem ser necessárias:</p><div class="w-full h-12 border border-gray-300 rounded-md mt-1 p-2"></div></div>
+                <div><p class="text-sm font-medium">Estimativa de Prazo (dias):</p><div class="input-line"></div></div>
+            </div>
+        </section>
+
+        <!-- ORÇAMENTO - PEÇAS E MÃO DE OBRA -->
+        <section class="mt-4">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <!-- PEÇAS -->
+                <div class="md:col-span-3">
+                    <h4 class="font-semibold text-center bg-gray-200 p-2 rounded-t-md">📦 ITENS E PEÇAS ORÇADOS</h4>
+                    <div class="overflow-x-auto border border-gray-200">
+                        <table class="w-full text-sm text-left">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-2">Item/Peça</th>
+                                    <th class="p-2">Qtd.</th>
+                                    <th class="p-2">Vlr. Unit.</th>
+                                    <th class="p-2">Vlr. Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
+                                <tr class="font-semibold bg-gray-50">
+                                    <td colspan="3" class="p-2 text-right">Subtotal Peças:</td>
+                                    <td class="p-2">R$</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- MÃO DE OBRA -->
+                <div class="md:col-span-2">
+                    <h4 class="font-semibold text-center bg-gray-200 p-2 rounded-t-md">💰 MÃO DE OBRA</h4>
+                     <div class="overflow-x-auto border border-gray-200">
+                        <table class="w-full text-sm text-left">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-2">Tipo de Serviço</th>
+                                    <th class="p-2">Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td></tr>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td></tr>
+                                <tr class="border-b"><td class="p-2 h-8"></td><td></td></tr>
+                                <tr class="font-semibold bg-gray-50">
+                                    <td class="p-2 text-right">Subtotal M. Obra:</td>
+                                    <td class="p-2">R$</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALOR TOTAL -->
+        <section class="mt-6">
+            <div class="bg-blue-100 border-2 border-blue-500 rounded-lg p-4 text-center">
+                <h3 class="text-lg font-bold text-blue-800">VALOR TOTAL ESTIMADO</h3>
+                <p class="text-3xl font-bold text-blue-900 mt-1">R$ _________________</p>
+            </div>
+        </section>
+
+        <!-- AUTORIZAÇÃO -->
+        <section class="mt-6 border-t pt-4">
+            <h3 class="font-bold text-center text-lg">✅ AUTORIZAÇÃO DE SERVIÇO</h3>
+            <div class="mt-3 text-sm space-y-2 bg-gray-50 p-4 rounded-md">
+                <label class="flex items-start">
+                    <input type="checkbox" class="mt-1 mr-2">
+                    <span>Autorizo o início dos serviços e a aquisição das peças conforme orçamento acima.</span>
+                </label>
+                <label class="flex items-start">
+                    <input type="checkbox" class="mt-1 mr-2">
+                    <span>Autorizo contato via WhatsApp para liberações de ajustes ou adicionais no orçamento.</span>
+                </label>
+                <label class="flex items-start">
+                    <input type="checkbox" class="mt-1 mr-2">
+                    <span>Estou ciente de que serviços não orçados previamente serão informados para nova aprovação.</span>
+                </label>
+            </div>
+            <div class="mt-8 flex flex-col items-center">
+                <div class="w-full max-w-xs border-t border-gray-400"></div>
+                <p class="mt-2 text-sm font-semibold">Assinatura do Cliente</p>
+                <p class="text-sm mt-4">Data: ____ / ____ / ________</p>
+            </div>
+        </section>
+
+        <!-- GARANTIA -->
+        <footer class="mt-6 text-center text-xs text-gray-500 border-t pt-4">
+            <p class="font-semibold">Pós-venda e Garantia</p>
+            <p>Após a entrega do veículo, nossa equipe poderá entrar em contato para acompanhar sua satisfação. Garantia de serviço válida por ___ dias ou ___ km (o que ocorrer primeiro).</p>
+            <p>Dúvidas? Entre em contato pelo WhatsApp: (00) 91234-5678</p>
+        </footer>
+    </div>
+
+    <!-- PÁGINA 2 / VERSO: CHECKLIST VISUAL -->
+    <div class="page-break max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-lg mt-8">
+        <header class="text-center pb-4 border-b-2 border-gray-200">
+            <h2 class="text-xl font-bold">📷 CHECKLIST VISUAL E PERTENCES (VISTORIA DE ENTRADA)</h2>
+            <p class="text-sm text-gray-600">Descreva todos os danos pré-existentes (riscos, amassados, etc.)</p>
+        </header>
+
+        <section class="mt-4">
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-center font-semibold text-sm">VISTA SUPERIOR / LATERAL ESQUERDA</p>
+                    <p class="text-sm" style="margin: 40px;">Descrição:</p>
+                </div>
+                <div>
+                    <p class="text-center font-semibold text-sm">VISTA FRONTAL / TRASEIRA / LATERAL DIREITA</p>
+                    <p class="text-sm" style="margin: 40px;">Descrição:</p>
+                </div>
+            </div>
+            <p class="text-center text-xs mt-2"><b>Legenda:</b> (R) Risco (A) Amassado (T) Trinca (F) Falha Pintura (Q) Quebra</p>
+            <p class="text-center text-xs mt-2"> Arquivos digitais como fotos e vídeos poderão anexados e enviados por E-mail/Whatsapp </p>
+        </section>
+
+        <section>
+            <h3 class="section-title">📝 PERTENCES DEIXADOS NO VEÍCULO</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm">
+                <label class="checkbox-label"><input type="checkbox">Som/Multimídia</label>
+                <label class="checkbox-label"><input type="checkbox">Documentos</label>
+                <label class="checkbox-label"><input type="checkbox">Carteira</label>
+                <label class="checkbox-label"><input type="checkbox">Ferramentas</label>
+                <label class="checkbox-label"><input type="checkbox">Macaco</label>
+                <label class="checkbox-label"><input type="checkbox">Triângulo</label>
+                <label class="checkbox-label"><input type="checkbox">Chave de Roda</label>
+                <label class="checkbox-label"><input type="checkbox">Estepe</label>
+            </div>
+             <p class="text-sm font-medium mt-4">Outros Pertences / Observações:</p>
+            <div class="w-full h-16 border border-gray-300 rounded-md mt-1 p-2"></div>
+        </section>
+
+        <section class="mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="flex flex-col items-center">
+                    <div class="w-full max-w-xs border-t border-gray-400"></div>
+                    <p class="mt-2 text-sm font-semibold">Nome do Funcionário Responsável</p>
+                    <p class="text-sm mt-2">Data: ____/____/____ Hora: ____:____</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-full max-w-xs border-t border-gray-400"></div>
+                    <p class="mt-2 text-sm font-semibold">Assinatura do Cliente (Ciente da Vistoria)</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
+
+
