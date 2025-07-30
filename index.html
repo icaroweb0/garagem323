@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,32 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-print-color-adjust: exact; /* Força a impressão de cores de fundo no Chrome/Safari */
-            color-adjust: exact; /* Padrão */
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+            background-color: #e5e7eb;
         }
+
         @media print {
             body {
                 -webkit-print-color-adjust: exact;
                 color-adjust: exact;
             }
+
             .no-print {
                 display: none;
             }
+
             .page-break {
                 page-break-before: always;
             }
         }
+
         .input-line {
             border-bottom: 1px solid #9ca3af;
             padding-bottom: 2px;
             min-height: 24px;
         }
+
         .section-title {
             background-color: #f3f4f6;
             padding: 6px 12px;
@@ -37,14 +44,17 @@
             margin-top: 16px;
             margin-bottom: 12px;
         }
+
         .checkbox-label {
             display: flex;
             align-items: center;
             margin-right: 16px;
         }
+
         .checkbox-label input {
             margin-right: 6px;
         }
+
         .car-drawing {
             font-family: monospace;
             white-space: pre;
@@ -53,8 +63,48 @@
             margin: 1rem 0;
             color: #4b5563;
         }
+
+
+        @media print {
+            body {
+                background-color: #ffffff;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .document-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                border: none !important;
+            }
+        }
+        .input-line {
+            border-bottom: 1px solid #9ca3af;
+            padding-bottom: 2px;
+            min-height: 24px;
+            width: 100%;
+            display: block;
+        }
+        .section-title {
+            font-weight: 600;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 4px;
+            margin-top: 16px;
+            margin-bottom: 12px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-label input {
+            margin-right: 8px;
+        }
     </style>
 </head>
+
 <body class="bg-gray-100 p-4 sm:p-8">
     <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-lg">
 
@@ -74,7 +124,7 @@
                 </div>
             </div>
             <div class="mt-4 sm:mt-0 w-full sm:w-auto flex sm:flex-col items-start sm:items-end">
-                 <div class="border-2 border-gray-700 p-3 rounded-lg text-center">
+                <div class="border-2 border-gray-700 p-3 rounded-lg text-center">
                     <h2 class="font-bold text-lg leading-tight">ORDEM DE SERVIÇO</h2>
                     <p class="font-bold text-xl text-red-600">Nº _____________</p>
                 </div>
@@ -89,12 +139,30 @@
         <section>
             <h3 class="section-title">🧑‍🔧 DADOS DO CLIENTE</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Nome Completo:</p><div class="input-line"></div></div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">CPF / CNPJ:</p><div class="input-line"></div></div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Telefone (Celular):</p><div class="input-line"></div></div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Telefone (Fixo):</p><div class="input-line"></div></div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">E-mail:</p><div class="input-line"></div></div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Endereço Completo:</p><div class="input-line"></div></div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">Nome Completo:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">CPF / CNPJ:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">Telefone (Celular):</p>
+                    <div class="input-line"></div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">Telefone (Fixo):</p>
+                    <div class="input-line"></div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">E-mail:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">Endereço Completo:</p>
+                    <div class="input-line"></div>
+                </div>
             </div>
         </section>
 
@@ -102,14 +170,36 @@
         <section>
             <h3 class="section-title">🚗 DADOS DO VEÍCULO</h3>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-4">
-                <div><p class="text-sm font-medium">Marca:</p><div class="input-line"></div></div>
-                <div><p class="text-sm font-medium">Modelo:</p><div class="input-line"></div></div>
-                <div><p class="text-sm font-medium">Cor:</p><div class="input-line"></div></div>
-                <div><p class="text-sm font-medium">Ano Fab./Mod.:</p><div class="input-line"></div></div>
-                <div><p class="text-sm font-medium">Placa:</p><div class="input-line"></div></div>
-                <div><p class="text-sm font-medium">Chassi:</p><div class="input-line"></div></div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Quilometragem (Entrada):</p><div class="input-line"></div></div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Combustível:</p>
+                <div>
+                    <p class="text-sm font-medium">Marca:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">Modelo:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">Cor:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">Ano Fab./Mod.:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">Placa:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">Chassi:</p>
+                    <div class="input-line"></div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">Quilometragem (Entrada):</p>
+                    <div class="input-line"></div>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">Combustível:</p>
                     <div class="flex flex-wrap mt-1 text-sm">
                         <label class="checkbox-label"><input type="checkbox">Gasolina</label>
                         <label class="checkbox-label"><input type="checkbox">Etanol</label>
@@ -117,7 +207,8 @@
                         <label class="checkbox-label"><input type="checkbox">Diesel</label>
                     </div>
                 </div>
-                <div class="col-span-2 sm:col-span-1"><p class="text-sm font-medium">Nível de Combustível:</p>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-sm font-medium">Nível de Combustível:</p>
                     <div class="flex flex-wrap mt-1 text-sm">
                         <label class="checkbox-label"><input type="checkbox">1/4</label>
                         <label class="checkbox-label"><input type="checkbox">1/2</label>
@@ -151,8 +242,14 @@
             <p class="text-sm font-medium">Descrição Técnica Inicial:</p>
             <div class="w-full h-20 border border-gray-300 rounded-md mt-1 p-2"></div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mt-3">
-                <div><p class="text-sm font-medium">Peças que podem ser necessárias:</p><div class="w-full h-12 border border-gray-300 rounded-md mt-1 p-2"></div></div>
-                <div><p class="text-sm font-medium">Estimativa de Prazo (dias):</p><div class="input-line"></div></div>
+                <div>
+                    <p class="text-sm font-medium">Peças que podem ser necessárias:</p>
+                    <div class="w-full h-12 border border-gray-300 rounded-md mt-1 p-2"></div>
+                </div>
+                <div>
+                    <p class="text-sm font-medium">Estimativa de Prazo (dias):</p>
+                    <div class="input-line"></div>
+                </div>
             </div>
         </section>
 
@@ -173,11 +270,36 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td><td></td><td></td></tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
                                 <tr class="font-semibold bg-gray-50">
                                     <td colspan="3" class="p-2 text-right">Subtotal Peças:</td>
                                     <td class="p-2">R$</td>
@@ -189,7 +311,7 @@
                 <!-- MÃO DE OBRA -->
                 <div class="md:col-span-2">
                     <h4 class="font-semibold text-center bg-gray-200 p-2 rounded-t-md">💰 MÃO DE OBRA</h4>
-                     <div class="overflow-x-auto border border-gray-200">
+                    <div class="overflow-x-auto border border-gray-200">
                         <table class="w-full text-sm text-left">
                             <thead class="bg-gray-100">
                                 <tr>
@@ -198,9 +320,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td></tr>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td></tr>
-                                <tr class="border-b"><td class="p-2 h-8"></td><td></td></tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 h-8"></td>
+                                    <td></td>
+                                </tr>
                                 <tr class="font-semibold bg-gray-50">
                                     <td class="p-2 text-right">Subtotal M. Obra:</td>
                                     <td class="p-2">R$</td>
@@ -234,7 +365,8 @@
                 </label>
                 <label class="flex items-start">
                     <input type="checkbox" class="mt-1 mr-2">
-                    <span>Estou ciente de que serviços não orçados previamente serão informados para nova aprovação.</span>
+                    <span>Estou ciente de que serviços não orçados previamente serão informados para nova
+                        aprovação.</span>
                 </label>
             </div>
             <div class="mt-8 flex flex-col items-center">
@@ -247,7 +379,8 @@
         <!-- GARANTIA -->
         <footer class="mt-6 text-center text-xs text-gray-500 border-t pt-4">
             <p class="font-semibold">Pós-venda e Garantia</p>
-            <p>Após a entrega do veículo, nossa equipe poderá entrar em contato para acompanhar sua satisfação. Garantia de serviço válida por ___ dias ou ___ km (o que ocorrer primeiro).</p>
+            <p>Após a entrega do veículo, nossa equipe poderá entrar em contato para acompanhar sua satisfação. Garantia
+                de serviço válida por ___ dias ou ___ km (o que ocorrer primeiro).</p>
             <p>Dúvidas? Entre em contato pelo WhatsApp: (00) 91234-5678</p>
         </footer>
     </div>
@@ -260,7 +393,7 @@
         </header>
 
         <section class="mt-4">
-             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                     <p class="text-center font-semibold text-sm">VISTA SUPERIOR / LATERAL ESQUERDA</p>
                     <p class="text-sm" style="margin: 40px;">Descrição:</p>
@@ -270,8 +403,10 @@
                     <p class="text-sm" style="margin: 40px;">Descrição:</p>
                 </div>
             </div>
-            <p class="text-center text-xs mt-2"><b>Legenda:</b> (R) Risco (A) Amassado (T) Trinca (F) Falha Pintura (Q) Quebra</p>
-            <p class="text-center text-xs mt-2"> Arquivos digitais como fotos e vídeos poderão anexados e enviados por E-mail/Whatsapp </p>
+            <p class="text-center text-xs mt-2"><b>Legenda:</b> (R) Risco (A) Amassado (T) Trinca (F) Falha Pintura (Q)
+                Quebra</p>
+            <p class="text-center text-xs mt-2"> Arquivos digitais como fotos e vídeos poderão anexados e enviados por
+                E-mail/Whatsapp </p>
         </section>
 
         <section>
@@ -286,7 +421,7 @@
                 <label class="checkbox-label"><input type="checkbox">Chave de Roda</label>
                 <label class="checkbox-label"><input type="checkbox">Estepe</label>
             </div>
-             <p class="text-sm font-medium mt-4">Outros Pertences / Observações:</p>
+            <p class="text-sm font-medium mt-4">Outros Pertences / Observações:</p>
             <div class="w-full h-16 border border-gray-300 rounded-md mt-1 p-2"></div>
         </section>
 
@@ -305,7 +440,183 @@
         </section>
 
     </div>
+
+    <!-- DOCUMENTO 1: AUTORIZAÇÃO DE SERVIÇO EXTRA (1/4 A4) -->
+    <div class="document-container mx-auto bg-white p-6 rounded-lg shadow-lg"
+        style="margin-top: 50px; max-width: 21cm; width: 10.5cm; min-height: 14.8cm; border: 1px dashed #ccc;">
+        <!-- Cabeçalho -->
+        <header class="text-center pb-4 border-b-2 border-gray-200">
+            <div class="flex items-center w-full">
+                <div class="flex items-center justify-center rounded-md mr-4" style="width: 150px;">
+                    <!--<span class="text-gray-500 text-xs text-center">SEU LOGO</span> -->
+                    <img src="/garagem_323_logo_alta_resolucao_2.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">GARAGEM 323</h1>
+                    <p class="text-xs text-gray-600">CNPJ: 00.000.000/0001-00</p>
+                    <p class="text-xs text-gray-600">Endereço: Av. Luciano de Bona, 5355 - Centro - Peruíbe/SP</p>
+                    <p class="text-xs text-gray-600">WhatsApp: (13) 99683-6538</p>
+                    <p class="text-xs text-gray-600">E-mail: contato@garagem323.com.br | @garagem323</p>
+                </div>
+            </div>
+            <h1 class="text-xl font-bold text-red-600 mt-2">AUTORIZAÇÃO DE SERVIÇO EXTRA</h1>
+        </header>
+
+        <!-- Campos Obrigatórios -->
+        <section class="mt-4 text-sm">
+            <div class="flex justify-between gap-4">
+                <div class="flex-1">
+                    <p class="font-medium">Nº O.S. (Ref.):</p><span class="input-line"></span>
+                </div>
+                <div class="flex-1">
+                    <p class="font-medium">Data:</p><span class="input-line"></span>
+                </div>
+            </div>
+            <div class="mt-3">
+                <p class="font-medium">Cliente:</p><span class="input-line"></span>
+            </div>
+            <div class="mt-3 flex gap-2">
+                <div class="flex-1">
+                    <p class="font-medium">Veículo:</p><span class="input-line"></span>
+                </div>
+                <div class="flex-1">
+                    <p class="font-medium">Placa:</p><span class="input-line"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalhes do Serviço Extra -->
+        <section class="mt-4 text-sm">
+            <div>
+                <p class="font-medium">Descrição do problema identificado:</p>
+                <div class="w-full h-16 border border-gray-300 rounded-md mt-1 p-1"></div>
+            </div>
+            <div class="mt-3">
+                <p class="font-medium">Peças necessárias (Item, Qtd., Valor):</p>
+                <div class="w-full h-12 border border-gray-300 rounded-md mt-1 p-1"></div>
+            </div>
+            <div class="mt-3">
+                <p class="font-medium">Serviço a ser executado:</p>
+                <div class="w-full h-12 border border-gray-300 rounded-md mt-1 p-1"></div>
+            </div>
+        </section>
+
+        <!-- Valores e Prazos -->
+        <section class="mt-4 text-sm">
+            <div class="flex justify-between items-center gap-4 bg-gray-100 p-2 rounded-md">
+                <div class="font-bold">Valor Adicional: R$ <span class="input-line inline-block w-24"></span></div>
+                <div class="font-bold">Prazo Adicional: <span class="input-line inline-block w-16"></span> dias</div>
+            </div>
+        </section>
+
+        <!-- Autorização -->
+        <section class="mt-4 text-xs text-center">
+            <p class="bg-gray-50 p-2 rounded-md">"Declaro estar ciente do serviço extra acima descrito, bem como do
+                valor e prazo estimado, e autorizo a execução do mesmo nesta Ordem de Serviço."</p>
+            <div class="mt-8">
+                <div class="w-full max-w-xs mx-auto border-t border-gray-400"></div>
+                <p class="mt-1 font-semibold">Assinatura do Cliente</p>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- DOCUMENTO 2: RECIBO DE PAGAMENTO E ENTREGA (A5) -->
+    <div class="document-container page-break mx-auto bg-white p-8 rounded-lg shadow-lg mt-8"
+        style="max-width: 21cm; width: 14.8cm; min-height: 21cm; border: 1px dashed #ccc;">
+        <!-- Cabeçalho -->
+        <header class="text-center pb-4 border-b-2 border-gray-200">
+            <div class="flex items-center w-full">
+                <div class="flex items-center justify-center rounded-md mr-4" style="width: 150px;">
+                    <!--<span class="text-gray-500 text-xs text-center">SEU LOGO</span> -->
+                    <img src="/garagem_323_logo_alta_resolucao_2.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">GARAGEM 323</h1>
+                    <p class="text-xs text-gray-600">CNPJ: 00.000.000/0001-00</p>
+                    <p class="text-xs text-gray-600">Endereço: Av. Luciano de Bona, 5355 - Centro - Peruíbe/SP</p>
+                    <p class="text-xs text-gray-600">WhatsApp: (13) 99683-6538</p>
+                    <p class="text-xs text-gray-600">E-mail: contato@garagem323.com.br | @garagem323</p>
+                </div>
+            </div>
+            <h1 class="text-2xl font-bold text-blue-600 mt-4">RECIBO DE PAGAMENTO E ENTREGA</h1>
+        </header>
+
+        <!-- Dados Gerais -->
+        <section class="mt-6 grid grid-cols-2 gap-6 text-sm">
+            <div>
+                <p class="font-medium">Nº O.S.:</p><span class="input-line"></span>
+            </div>
+            <div>
+                <p class="font-medium">Data de Entrega:</p><span class="input-line"></span>
+            </div>
+            <div class="col-span-2">
+                <p class="font-medium">Cliente:</p><span class="input-line"></span>
+            </div>
+            <div class="col-span-2">
+                <p class="font-medium">Veículo (Marca/Modelo/Placa):</p><span class="input-line"></span>
+            </div>
+        </section>
+
+        <!-- Detalhes do Serviço e Pagamento -->
+        <section class="mt-4 grid grid-cols-1 md:grid-cols-1 gap-6 text-sm">
+            <div>
+                <h3 class="section-title">Serviços Executados</h3>
+                <div class="w-full border border-gray-200 rounded-md p-3 bg-gray-50 space-y-3">
+                    <label class="checkbox-label text-sm font-medium">
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                        <span>Todos os serviços foram executados conforme o orçamento Nº</span>
+                        <span class="input-line inline-block w-24 ml-2"></span>
+                    </label>
+                    <p class="text-xs text-gray-500 pt-2">Outros serviços/observações:</p>
+                    <div class="w-full h-12"></div>
+                </div>
+                <h3 class="section-title mt-4">Peças Utilizadas</h3>
+                <div class="w-full h-20 border border-gray-200 rounded-md p-2 bg-gray-50"></div>
+            </div>
+            <div>
+                <h3 class="section-title">Pagamento</h3>
+                <div class="bg-blue-50 p-3 rounded-md border border-blue-200">
+                    <p class="font-bold text-lg">Valor Total: R$ <span class="input-line inline-block w-32"></span></p>
+                    <p class="font-medium mt-3">Forma de Pagamento:</p>
+                    <div class="grid grid-cols-2 gap-1 mt-1 text-xs">
+                        <label class="checkbox-label"><input type="checkbox"> Pix</label>
+                        <label class="checkbox-label"><input type="checkbox"> Dinheiro</label>
+                        <label class="checkbox-label"><input type="checkbox"> Cartão Débito</label>
+                        <label class="checkbox-label"><input type="checkbox"> Cartão Crédito</label>
+                    </div>
+                    <div class="mt-2 text-xs">
+                        <label class="checkbox-label"><input type="checkbox"> Parcelado: <span
+                                class="input-line inline-block w-8"></span>x de R$ <span
+                                class="input-line inline-block w-16"></span></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Confirmação e Assinaturas -->
+        <section class="mt-6">
+            <h3 class="section-title text-center">✅ Confirmação de Entrega</h3>
+            <p class="text-xs text-center bg-gray-50 p-3 rounded-md">"Declaro que recebi o veículo acima descrito, com
+                os serviços executados conforme combinado. Estou ciente do funcionamento e do prazo de garantia
+                informado pela oficina."</p>
+            <div class="mt-12 grid grid-cols-2 gap-8">
+                <div class="text-center">
+                    <div class="w-full border-t border-gray-400"></div>
+                    <p class="mt-1 font-semibold text-sm">Assinatura do Cliente</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-full border-t border-gray-400"></div>
+                    <p class="mt-1 font-semibold text-sm">Responsável da Oficina</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
 </body>
+
 </html>
 
 
